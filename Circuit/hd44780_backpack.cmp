@@ -1,0 +1,143 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 12/04/2014 11:36:38 PM
+
+BeginCmp
+TimeStamp = /52E7B895;
+Reference = 10k1;
+ValeurCmp = POT;
+IdModule  = CT-6ETP;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E7B6CE;
+Reference = C1;
+ValeurCmp = 0.1uf;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E7B6DD;
+Reference = C2;
+ValeurCmp = 10uf;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E5EF0A;
+Reference = IC1;
+ValeurCmp = ATTINY84A-SS;
+IdModule  = so-14;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E5F368;
+Reference = P1;
+ValeurCmp = I2C;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E5F34A;
+Reference = P2;
+ValeurCmp = ISCP;
+IdModule  = pin_array_3x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E7BF11;
+Reference = P3;
+ValeurCmp = A0;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E7BF3D;
+Reference = P4;
+ValeurCmp = A1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E7BF62;
+Reference = P5;
+ValeurCmp = A7;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E7BF8C;
+Reference = P6;
+ValeurCmp = 8;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E7BFAC;
+Reference = P7;
+ValeurCmp = 10;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /5348FF42;
+Reference = P8;
+ValeurCmp = SERIAL QA;
+IdModule  = PIN_ARRAY_1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E8E42C;
+Reference = P9;
+ValeurCmp = +5V;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E8E441;
+Reference = P10;
+ValeurCmp = GND;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E7BBAE;
+Reference = Q1;
+ValeurCmp = NPN;
+IdModule  = SOT323;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E7BB9A;
+Reference = R1;
+ValeurCmp = 1k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E7B452;
+Reference = R2;
+ValeurCmp = 220;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E8F5E5;
+Reference = SW1;
+ValeurCmp = Reset;
+IdModule  = SW_PUSH_SMALL;
+EndCmp
+
+BeginCmp
+TimeStamp = /53493FF8;
+Reference = U1;
+ValeurCmp = 74HC595-16-PIN;
+IdModule  = so-16;
+EndCmp
+
+BeginCmp
+TimeStamp = /52E5F33B;
+Reference = U2;
+ValeurCmp = HD44780;
+IdModule  = LCD_16_pin;
+EndCmp
+
+EndListe
