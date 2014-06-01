@@ -16,9 +16,9 @@
 // Clock tells the SR that the data pin holds the next valid bit
 // Strobe gets data input to be made visible on the parallel output pins.
 
-const int PIN_LCD_STROBE         =  2;  // Out: LCD IC4094 shift-register strobe
-const int PIN_LCD_DATA           =  3;  // Out: LCD IC4094 shift-register data
-const int PIN_LCD_CLOCK          =  4;  // Out: LCD IC4094 shift-register clock
+const int PIN_LCD_STROBE         =  9;  // Out: LCD IC4094 shift-register strobe
+const int PIN_LCD_DATA           =  2;  // Out: LCD IC4094 shift-register data
+const int PIN_LCD_CLOCK          =  3;  // Out: LCD IC4094 shift-register clock
 const int PIN_LCD_BACKLIGHT      =  5;  // Out: LCD backlight (PWM)
 
 // srdata / srclock / strobe
@@ -49,7 +49,7 @@ void setup(){
     pinMode(PIN_LCD_BACKLIGHT, OUTPUT);
     analogWrite(PIN_LCD_BACKLIGHT, 80);
 
-    lcd.begin(20, 4);               // initialize the lcd 
+    lcd.begin(16, 2);               // initialize the lcd 
 
     // load characters to the LCD
     lcd.createChar(0, smiley);
