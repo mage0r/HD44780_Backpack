@@ -259,9 +259,9 @@ void LiquidCrystal_SR_LCD3::begin(uint8_t cols, uint8_t lines, uint8_t dotsize)
 // http://www.arduino.cc/playground/Code/LCD3wires
 
 // bitmasks for control bits on shift register
-#define SR_EN_BIT B00010000   // LCD Data enable bit.
-#define SR_RW_BIT B00100000   // RW can be pinned low since we only send
-#define SR_RS_BIT B01000000   // LOW: command. HIGH: character.
+#define SR_EN_BIT B00000000   // LCD Data enable bit.
+#define SR_RW_BIT B00000000   // RW can be pinned low since we only send
+#define SR_RS_BIT B00100000   // LOW: command. HIGH: character.
 
 void LiquidCrystal_SR_LCD3::send(uint8_t value, uint8_t mode) 
 {
@@ -294,10 +294,10 @@ void LiquidCrystal_SR_LCD3::_pushOut(uint8_t nibble)
 {
 
     uint8_t elbbin = nibble & 0xf0;
-    elbbin = elbbin | ((nibble & 0x01) << 3);
-    elbbin = elbbin | ((nibble & 0x02) << 1);
-    elbbin = elbbin | ((nibble & 0x04) >> 1);
-    elbbin = elbbin | ((nibble & 0x08) >> 3);
+    elbbin = elbbin | ((nibble & 0x01) >> 4);
+    elbbin = elbbin | ((nibble & 0x02) >> 2);
+    elbbin = elbbin | ((nibble & 0x04));
+    elbbin = elbbin | ((nibble & 0x08) << 2);
     
     // Make data available for pushing to the LCD.
     shiftOut(_srdata_pin, _srclock_pin, LSBFIRST, elbbin);

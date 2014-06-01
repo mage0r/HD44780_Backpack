@@ -5,6 +5,8 @@ This project uses an Attiny 84 to drive LCD Displays that use the HD44780 driver
 
 This version reflects a pre-release design that is not practical.  Two were made and only partially worked.  This design was completely superseeded by the master branch and is only included here for reference..
 
+DO NOT USE THIS BRANCH UNLESS YOU HAVE ONE OF THE EARLY MODELS!
+
 
 ![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/Screenshot.png)
 
