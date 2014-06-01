@@ -10,6 +10,7 @@ There are three sections, the circuit design for kicad, an arduino library (modi
 
 ![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/2014-06-01%2018.00.34.jpg)
 
+![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/2014-06-01%2022.12.19.jpg
 
 CREDITS
 ------------
