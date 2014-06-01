@@ -1,0 +1,11 @@
+These are the SR pins and where they go.
+
+SR	:	HD44780
+--------|---------------
+D4	:	QD
+D5	:	QE
+D6	:	QF
+D7	:	QG
+RS	:	QC
+E	:	RCLK
+BRIGHT	:	QH
