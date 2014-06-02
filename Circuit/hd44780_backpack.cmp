@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 2/06/2014 2:16:36 AM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 2/06/2014 10:51:19 PM
 
 BeginCmp
 TimeStamp = /52E7B895;
@@ -26,6 +26,13 @@ TimeStamp = /52E5EF0A;
 Reference = IC1;
 ValeurCmp = ATTINY84A-SS;
 IdModule  = so-14;
+EndCmp
+
+BeginCmp
+TimeStamp = /538C4D6F;
+Reference = K1;
+ValeurCmp = PWR_SHIFT;
+IdModule  = PIN_ARRAY_3X1;
 EndCmp
 
 BeginCmp
@@ -57,38 +64,45 @@ IdModule  = ATtiny_breakout;
 EndCmp
 
 BeginCmp
-TimeStamp = /538B28C4;
+TimeStamp = /538C3793;
 Reference = P4;
-ValeurCmp = POWER;
-IdModule  = USB_MINI_B;
+ValeurCmp = USB_5PIN_SHELL;
+IdModule  = MINI_USB;
 EndCmp
 
 BeginCmp
 TimeStamp = /538B5C6F;
 Reference = P5;
-ValeurCmp = CONN_10;
+ValeurCmp = MESH_BKOUT_1-10;
 IdModule  = PIN_ARRAY_10X1;
 EndCmp
 
 BeginCmp
 TimeStamp = /538B4FDE;
 Reference = P6;
-ValeurCmp = CONN_10;
+ValeurCmp = MESH_BKOUT_11-20;
 IdModule  = PIN_ARRAY_10X1;
 EndCmp
 
 BeginCmp
 TimeStamp = /538B6DE7;
 Reference = P7;
-ValeurCmp = CONN_4;
+ValeurCmp = MESH_ENABLE;
 IdModule  = PIN_ARRAY_4x1;
 EndCmp
 
 BeginCmp
 TimeStamp = /538B6478;
 Reference = P8;
-ValeurCmp = CONN_4X2;
+ValeurCmp = ATTINY_ENABLE;
 IdModule  = pin_array_4x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /538C72FB;
+Reference = P9;
+ValeurCmp = CONN_2;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
@@ -96,6 +110,20 @@ TimeStamp = /52E7BBAE;
 Reference = Q1;
 ValeurCmp = NPN;
 IdModule  = SOT323;
+EndCmp
+
+BeginCmp
+TimeStamp = /538C3BC5;
+Reference = Q2;
+ValeurCmp = BSS138;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /538C454F;
+Reference = Q3;
+ValeurCmp = BSS138;
+IdModule  = SOT23;
 EndCmp
 
 BeginCmp
@@ -116,6 +144,48 @@ BeginCmp
 TimeStamp = /538B2DE4;
 Reference = R3;
 ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /538C4250;
+Reference = R4;
+ValeurCmp = 10K;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /538C4056;
+Reference = R5;
+ValeurCmp = 10K;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /538C4567;
+Reference = R6;
+ValeurCmp = 10K;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /538C455D;
+Reference = R7;
+ValeurCmp = 10K;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /538C50D7;
+Reference = R8;
+ValeurCmp = 1K;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /538C50E6;
+Reference = R9;
+ValeurCmp = 2.2K;
 IdModule  = SM0805;
 EndCmp
 

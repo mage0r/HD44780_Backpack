@@ -1,6 +1,6 @@
-EESchema-DOCLIB  Version 2.0  Date: 2/06/2014 1:27:44 AM
+EESchema-DOCLIB  Version 2.0  Date: 2/06/2014 6:50:22 PM
 #
-$CMP 3x7SEGMENTS
+$CMP 3X7SEGMENTS
 D 3x7-Segment
 K 7 Segment YY5631BG
 $ENDCMP
@@ -18,6 +18,11 @@ $ENDCMP
 $CMP ATTINY_BREAKOUT
 D Symbole general de connecteur
 K CONN
+$ENDCMP
+#
+$CMP BSS138
+D N-Channel Logic Level Transistor
+F transistors/mos/*.*
 $ENDCMP
 #
 $CMP CONN_1
