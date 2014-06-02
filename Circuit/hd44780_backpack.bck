@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 27/01/2014 4:43:06 PM
+EESchema-DOCLIB  Version 2.0  Date: 2/06/2014 1:27:44 AM
 #
 $CMP 3x7SEGMENTS
 D 3x7-Segment
@@ -15,6 +15,16 @@ D 8 bits serial in // out Shift Register 3 State Out
 K 74HC595
 $ENDCMP
 #
+$CMP ATTINY_BREAKOUT
+D Symbole general de connecteur
+K CONN
+$ENDCMP
+#
+$CMP CONN_1
+D 1 pin
+K CONN
+$ENDCMP
+#
 $CMP HD44780
 D HD44780
 K HD44780
@@ -28,6 +38,10 @@ $ENDCMP
 $CMP ISCP
 D ISCP Header
 K ISCP
+$ENDCMP
+#
+$CMP MESHTHING
+D Meshthingy V1.2
 $ENDCMP
 #
 #End Doc Library

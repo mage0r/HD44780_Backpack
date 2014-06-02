@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 12/04/2014 11:36:38 PM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 2/06/2014 2:16:36 AM
 
 BeginCmp
 TimeStamp = /52E7B895;
@@ -29,6 +29,13 @@ IdModule  = so-14;
 EndCmp
 
 BeginCmp
+TimeStamp = /538B4882;
+Reference = M1;
+ValeurCmp = MESHTHING;
+IdModule  = xbee_r1-XBEE;
+EndCmp
+
+BeginCmp
 TimeStamp = /52E5F368;
 Reference = P1;
 ValeurCmp = I2C;
@@ -43,59 +50,45 @@ IdModule  = pin_array_3x2;
 EndCmp
 
 BeginCmp
-TimeStamp = /52E7BF11;
+TimeStamp = /538B26B0;
 Reference = P3;
-ValeurCmp = A0;
-IdModule  = 1pin;
+ValeurCmp = ATTINY_BREAKOUT;
+IdModule  = ATtiny_breakout;
 EndCmp
 
 BeginCmp
-TimeStamp = /52E7BF3D;
+TimeStamp = /538B28C4;
 Reference = P4;
-ValeurCmp = A1;
-IdModule  = 1pin;
+ValeurCmp = POWER;
+IdModule  = USB_MINI_B;
 EndCmp
 
 BeginCmp
-TimeStamp = /52E7BF62;
+TimeStamp = /538B5C6F;
 Reference = P5;
-ValeurCmp = A7;
-IdModule  = 1pin;
+ValeurCmp = CONN_10;
+IdModule  = PIN_ARRAY_10X1;
 EndCmp
 
 BeginCmp
-TimeStamp = /52E7BF8C;
+TimeStamp = /538B4FDE;
 Reference = P6;
-ValeurCmp = 8;
-IdModule  = 1pin;
+ValeurCmp = CONN_10;
+IdModule  = PIN_ARRAY_10X1;
 EndCmp
 
 BeginCmp
-TimeStamp = /52E7BFAC;
+TimeStamp = /538B6DE7;
 Reference = P7;
-ValeurCmp = 10;
-IdModule  = 1pin;
+ValeurCmp = CONN_4;
+IdModule  = PIN_ARRAY_4x1;
 EndCmp
 
 BeginCmp
-TimeStamp = /5348FF42;
+TimeStamp = /538B6478;
 Reference = P8;
-ValeurCmp = SERIAL QA;
-IdModule  = PIN_ARRAY_1;
-EndCmp
-
-BeginCmp
-TimeStamp = /52E8E42C;
-Reference = P9;
-ValeurCmp = +5V;
-IdModule  = 1pin;
-EndCmp
-
-BeginCmp
-TimeStamp = /52E8E441;
-Reference = P10;
-ValeurCmp = GND;
-IdModule  = 1pin;
+ValeurCmp = CONN_4X2;
+IdModule  = pin_array_4x2;
 EndCmp
 
 BeginCmp
@@ -120,6 +113,13 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /538B2DE4;
+Reference = R3;
+ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /52E8F5E5;
 Reference = SW1;
 ValeurCmp = Reset;
@@ -127,7 +127,7 @@ IdModule  = SW_PUSH_SMALL;
 EndCmp
 
 BeginCmp
-TimeStamp = /53493FF8;
+TimeStamp = /538B53A3;
 Reference = U1;
 ValeurCmp = 74HC595-16-PIN;
 IdModule  = so-16;
