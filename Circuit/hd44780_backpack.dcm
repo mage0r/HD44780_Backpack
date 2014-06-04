@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2/06/2014 7:14:02 PM
+EESchema-DOCLIB  Version 2.0  Date: 4/06/2014 7:41:02 PM
 #
 $CMP 3X7SEGMENTS
 D 3x7-Segment
@@ -22,6 +22,12 @@ $ENDCMP
 #
 $CMP BSS138
 D BSS138, 50V Vds, 0.22A Id, N-Channel MOSFET, SOT23
+K N-Channel MOSFET Logic Level
+F http://www.fairchildsemi.com/ds/BS/BSS138.pdf
+$ENDCMP
+#
+$CMP BSS138DW
+D BSS138DW, 50V Vds, 0.22A Id, N-Channel MOSFET, SOT363
 K N-Channel MOSFET Logic Level
 F http://www.fairchildsemi.com/ds/BS/BSS138.pdf
 $ENDCMP
