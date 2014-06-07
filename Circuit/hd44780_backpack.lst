@@ -1,0 +1,48 @@
+eeschema (2013-07-07 BZR 4022)-stable  >> Creation date: 7/06/2014 4:03:27 PM
+#Cmp ( order = Reference )
+| 10k1       POT         ~                   ; ~           ; ~           ;             
+| C1         0.1uf       ~                   ; ~           ; ~           ;             
+| C2         10uf        ~                   ; ~           ; ~           ;             
+| IC1        ATTINY84A-SS                    ; SO14        ;             ;             
+| P1         I2C         ~                   ; ~           ; ~           ;             
+| P2         ISCP        ~                   ; ~           ; ~           ;             
+| P3         A0                              ;             ;             ;             
+| P4         A1                              ;             ;             ;             
+| P5         A7                              ;             ;             ;             
+| P6         8                               ;             ;             ;             
+| P7         10                              ;             ;             ;             
+| P8         SERIAL QA                       ;             ;             ;             
+| P9         +5V                             ;             ;             ;             
+| P10        GND                             ;             ;             ;             
+| Q1         NPN         ~                   ; ~           ; ~           ;             
+| R1         1k          ~                   ; ~           ; ~           ;             
+| R2         220         ~                   ; ~           ; ~           ;             
+| SW1        Reset       ~                   ; ~           ; ~           ;             
+| U1         74HC595-16-PIN~                   ; ~           ; ~           ;             
+| U2         HD44780                         ;             ;             ;             
+#End Cmp
+
+#Cmp ( order = Value )
+| 0.1uf        C1        ; ~           ; ~           ;             
+| 10uf         C2        ; ~           ; ~           ;             
+| ATTINY84A-SS IC1       ; SO14        ;             ;             
+| 8            P6        ;             ;             ;             
+| POT          10k1      ; ~           ; ~           ;             
+| 10           P7        ;             ;             ;             
+| A0           P3        ;             ;             ;             
+| A1           P4        ;             ;             ;             
+| A7           P5        ;             ;             ;             
+| SERIAL QA    P8        ;             ;             ;             
+| +5V          P9        ;             ;             ;             
+| GND          P10       ;             ;             ;             
+| I2C          P1        ; ~           ; ~           ;             
+| ISCP         P2        ; ~           ; ~           ;             
+| NPN          Q1        ; ~           ; ~           ;             
+| 220          R2        ; ~           ; ~           ;             
+| 1k           R1        ; ~           ; ~           ;             
+| Reset        SW1       ; ~           ; ~           ;             
+| HD44780      U2        ;             ;             ;             
+| 74HC595-16-PIN U1        ; ~           ; ~           ;             
+#End Cmp
+
+#End List

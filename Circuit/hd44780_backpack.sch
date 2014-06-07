@@ -36,7 +36,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "13 may 2014"
+Date "7 jun 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -51,7 +51,8 @@ P 2650 2650
 F 0 "IC1" H 1900 3400 60  0000 C CNN
 F 1 "ATTINY84A-SS" H 3150 1900 60  0000 C CNN
 F 2 "SO14" H 1950 1900 60  0001 C CNN
-F 3 "" H 2650 2650 60  0000 C CNN
+F 3 "http://www.atmel.com/Images/doc8006.pdf" H 2650 2650 60  0001 C CNN
+F 4 "0.87" H 2650 2650 60  0001 C CNN "Cost Per Unit"
 	1    2650 2650
 	1    0    0    -1  
 $EndComp
@@ -194,7 +195,9 @@ P 6450 1400
 F 0 "10k1" H 6450 1300 50  0000 C CNN
 F 1 "POT" H 6450 1400 50  0000 C CNN
 F 2 "~" H 6450 1400 60  0000 C CNN
-F 3 "~" H 6450 1400 60  0000 C CNN
+F 3 "http://copal-electronics.info/en/00011/0064d.pdf" H 6450 1400 60  0001 C CNN
+F 4 "0.77" H 6450 1400 60  0001 C CNN "Cost Per Unit"
+F 5 "http://www.digikey.com.au/product-search/en?vendor=0&keywords=CT6EP103-ND" H 6450 1400 60  0001 C CNN "Link"
 	1    6450 1400
 	0    -1   -1   0   
 $EndComp
@@ -488,7 +491,9 @@ P 3850 3700
 F 0 "SW1" H 4000 3810 50  0000 C CNN
 F 1 "Reset" H 3850 3620 50  0000 C CNN
 F 2 "~" H 3850 3700 60  0000 C CNN
-F 3 "~" H 3850 3700 60  0000 C CNN
+F 3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 3850 3700 60  0001 C CNN
+F 4 "0.1" H 3850 3700 60  0001 C CNN "Cost Per Unit"
+F 5 "http://www.digikey.com.au/product-detail/en/FSM4JH/450-1650-ND/1632536" H 3850 3700 60  0001 C CNN "Link"
 	1    3850 3700
 	0    -1   -1   0   
 $EndComp
@@ -558,8 +563,9 @@ U 1 1 53493FF8
 P 5250 4150
 F 0 "U1" H 5400 4750 70  0000 C CNN
 F 1 "74HC595-16-PIN" H 5250 3550 70  0000 C CNN
-F 2 "~" H 5250 4150 60  0000 C CNN
-F 3 "~" H 5250 4150 60  0000 C CNN
+F 2 "so-16" H 5050 3700 60  0000 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/74HC_HCT595.pdf" H 5250 4150 60  0001 C CNN
+F 4 "0.04" H 5250 4150 60  0001 C CNN "Cost per unit"
 	1    5250 4150
 	1    0    0    -1  
 $EndComp
