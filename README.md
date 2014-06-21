@@ -3,12 +3,14 @@ Attiny 84 LCD Display for the HD44780
 
 This project uses an Attiny 84 to drive LCD Displays that use the HD44780 driver.  It's simple, small and compatible with a range of sizes.  The board can easily be trimmed down to the standard 16x2 size or left at it's original size for 20x4.
 
-There are three sections, the circuit design for kicad, an arduino library (modified from some great work by https://github.com/marcmerlin) and lastly a few photos of the finished product.
+This version includes a large prototyping area and a mounting for a "mesthingy" from http://www.m9design.co/
+
+There are two sections, the circuit design for kicad, and a few photos of the finished product.
+
+This version is compatible with Marc Merlin's NewLiquidCrystal library (https://github.com/marcmerlin)
 
 
-![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/Screenshot.png)
-
-![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/2014-06-01%2018.00.34.jpg)
+![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/meshthing_addon.png)
 
 
 CREDITS
