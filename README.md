@@ -10,9 +10,11 @@ There are two sections, the circuit design for kicad, and a few photos of the fi
 This version is compatible with Marc Merlin's NewLiquidCrystal library (https://github.com/marcmerlin)
 
 
-![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/Meshthingy/Photos/meshthing_addon.png)
+![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/meshthing_addon.png)
 
-![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/2014-06-01%2022.12.19.jpg
+![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/2014-07-06%2002.47.57.jpg)
+
+![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/2014-07-06%2002.48.30.jpg)
 
 CREDITS
 ------------
