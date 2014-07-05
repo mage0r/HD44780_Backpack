@@ -1,5 +1,7 @@
-update=13/05/2014 6:31:12 PM
+update=3/06/2014 7:17:28 PM
 last_client=eeschema
+[general]
+version=1
 [cvpcb]
 version=1
 NetIExt=net
@@ -9,10 +11,10 @@ EquName1=devcms
 version=1
 LastNetListRead=hd44780_backpack.net
 UseCmpFile=1
-PadDrill=0.000000000000
-PadDrillOvalY=0.000000000000
-PadSizeH=0.635000000000
-PadSizeV=1.270000000000
+PadDrill=4.000000000000
+PadDrillOvalY=3.000000000000
+PadSizeH=5.000000000000
+PadSizeV=4.000000000000
 PcbTextSizeV=1.500000000000
 PcbTextSizeH=1.500000000000
 PcbTextThickness=0.300000000000
@@ -43,12 +45,11 @@ LibName14=led
 LibName15=dip_sockets
 LibName16=pga_sockets
 LibName17=valves
-[general]
-version=1
+LibName18=C:/Users/mage/Dropbox/Circuits/Libraries/xbee_r1
 [eeschema]
 version=1
 LibDir=
-NetFmtName=
+NetFmtName=PcbnewAdvanced
 RptD_X=0
 RptD_Y=100
 RptLab=1
@@ -84,3 +85,7 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
+LibName31=hd44780_backpack
+LibName32=C:/Users/mage/Dropbox/Circuits/Libraries/cube4-cache
+LibName33=C:/Users/mage/Dropbox/Circuits/Libraries/xbee_r1
+LibName34=C:/Users/mage/Dropbox/Circuits/Libraries/con-usb-3
