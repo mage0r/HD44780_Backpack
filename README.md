@@ -5,7 +5,7 @@ This project uses an Attiny 84 to drive LCD Displays that use the HD44780 driver
 
 This version includes a large prototyping area and a mounting for a "mesthingy" from http://www.m9design.co/
 
-There are two sections, the circuit design for kicad, and a few photos of the finished product.
+There are three sections, the circuit design for kicad, some i2c arduino sketches and a few photos of the finished product.
 
 This version is compatible with Marc Merlin's NewLiquidCrystal library (https://github.com/marcmerlin)
 
@@ -24,7 +24,6 @@ SPECIAL THANKS
 ------------
 
 To the HackMelbourne (CCHS, http://hackmelbourne.org) community of Melbourne, Australia.
-To Andy Gelme (https://github.com/geekscape) for his help with modifying the library.
 
 To all other open-source developers whose countless hours supported every other aspect of this design.
 
