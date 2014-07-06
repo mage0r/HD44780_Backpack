@@ -17,6 +17,8 @@ byte ATtinyAddress=0x26; // this is the address we are sending to by default.
 String inputString = "";         // a string to hold incoming data
 boolean stringComplete = false;  // whether the string is complete
 
+int toReceive = 0;
+
 void setup(){
     Wire.begin();
     Serial.begin(9600);
@@ -29,6 +31,27 @@ void setup(){
     
 }
 void loop(){
+  
+  // check if we're recieving any data we've requested.
+  while(Wire.available())    // slave may send less than requested
+  { 
+    if(toReceive < 0) {
+      toReceive = (int)Wire.read();
+      Serial.println(toReceive);
+    }
+    else {
+      char c = Wire.read(); // receive a byte as character
+      Serial.print(c);         // print the character
+      
+      toReceive--;
+    }
+    
+    if (toReceive)
+      Wire.requestFrom((int)ATtinyAddress, 1);
+    else
+      Serial.println();
+  }
+
   
   char inSerial; // temporary serial character
   
@@ -54,6 +77,10 @@ void loop(){
      }
      else if ( inputString.charAt(0) == 'F' ) {
        findDevices();
+     }
+     else if ( inputString.charAt(0) == 'G' ) {
+       toReceive = -1;
+       Wire.requestFrom((int)ATtinyAddress, 1); // just ask for our count character.
      }
      else
      {

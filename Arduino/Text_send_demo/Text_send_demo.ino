@@ -30,6 +30,9 @@ byte i2c_slave_addr;
 String inputString = "";
 boolean stringComplete = false;
 
+int toSend = 0;
+String transmit = "abcdefghijklmnopaaaaa";
+
 byte smiley[8] = {
   0b00000, 0b00000, 0b01010, 0b00000, 0b00000, 0b10001, 0b01110, 0b00000
 };
@@ -66,7 +69,10 @@ void setup(){
 
 void loop()
 {
-    char inI2C; // i2c temp variable.
+  // check for a requestEvent.
+  TinyWireS.onRequest(requestEvent); // register event
+  
+  char inI2C; // i2c temp variable.
 
   if (TinyWireS.available()){           // got I2C input!
     inI2C = (char)TinyWireS.receive();     // get the byte from master
@@ -170,6 +176,41 @@ boolean CheckCommands() {
       lcd.print(__DATE__);
       return true;
     }
+  } else if (inputString.charAt(1) == '<' ) {
+    if ( inputString.charAt(0) == '?' ) { // prep build information to send via wire.
+      transmit = "Build Information:";
+      transmit += __FILE__;
+      transmit += " ";
+      transmit += __TIME__;
+      transmit += " ";
+      transmit += __DATE__;
+      return true;
+    }
   }
   return false;
+}
+
+// function that executes whenever data is requested by master
+// this function is registered as an event, see setup()
+void requestEvent()
+{
+  
+  
+  if (!toSend) {
+    TinyWireS.send((char)transmit.length());
+    toSend = transmit.length();
+    lcd.setCursor(0,1);
+    lcd.print(toSend);
+    lcd.setCursor(0,2); // preset this
+  }
+  else {
+    
+      toSend--;
+    //for(int i = 0; i<transmit.length(); i++) {
+      TinyWireS.send(transmit.charAt(toSend)); // Tinywire can only send one byte at a time...yay.
+      lcd.print(transmit.charAt(toSend));
+    //}
+    
+  }
+  //TinyWireS.send(38); // Tinywire can only send one byte at a time...yay.
 }
