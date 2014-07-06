@@ -39,9 +39,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "HD44780 ATTiny 84 backpack with Meshthing slot"
 Date "23 jun 2014"
-Rev ""
+Rev "1.5"
 Comp ""
 Comment1 ""
 Comment2 ""
