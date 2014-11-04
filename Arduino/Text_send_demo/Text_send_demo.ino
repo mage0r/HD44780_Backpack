@@ -23,15 +23,15 @@ const int PIN_LCD_BACKLIGHT      =  A7;  // Out: LCD backlight (PWM)
 LiquidCrystal_SR_LCD3 lcd(PIN_LCD_DATA, PIN_LCD_CLOCK, PIN_LCD_STROBE);
 
 // Change this for every slave!
-int eeprom_address = 0;
+byte eeprom_address = 0;
 byte i2c_slave_addr;
 
 // data string input
 String inputString = "";
 boolean stringComplete = false;
 
-int toSend = 0;
-String transmit = "abcdefghijklmnopaaaaa";
+byte toSend = 0;
+String transmit;
 
 byte smiley[8] = {
   0b00000, 0b00000, 0b01010, 0b00000, 0b00000, 0b10001, 0b01110, 0b00000
@@ -42,6 +42,9 @@ void setup(){
     pinMode(PIN_LCD_BACKLIGHT, OUTPUT);
     //analogWrite(PIN_LCD_BACKLIGHT, 0); // this seems to do nothing :(
     //digitalWrite(PIN_LCD_BACKLIGHT,HIGH);
+    
+    transmit.reserve(32);
+    transmit = "abcdefghijklmnopaaaaa";
     
     lcd.createChar(0, smiley);
     
@@ -194,8 +197,6 @@ boolean CheckCommands() {
 // this function is registered as an event, see setup()
 void requestEvent()
 {
-  
-  
   if (!toSend) {
     TinyWireS.send((char)transmit.length());
     toSend = transmit.length();

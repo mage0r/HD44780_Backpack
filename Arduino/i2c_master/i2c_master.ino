@@ -12,10 +12,12 @@
 */
 
 #include <Wire.h>
-byte ATtinyAddress=0x26; // this is the address we are sending to by default.
+byte ATtinyAddress; // this is the address we are sending to.  Set in setup()
 
 String inputString = "";         // a string to hold incoming data
 boolean stringComplete = false;  // whether the string is complete
+
+String receiveString = "";
 
 int toReceive = 0;
 
@@ -36,20 +38,44 @@ void loop(){
   while(Wire.available())    // slave may send less than requested
   { 
     if(toReceive < 0) {
-      toReceive = (int)Wire.read();
-      Serial.println(toReceive);
-    }
+      int test_wire = (int)Wire.read();
+      if(test_wire > 0) {
+        toReceive = test_wire;
+        //Serial.println(toReceive);
+      }
+    } 
     else {
       char c = Wire.read(); // receive a byte as character
-      Serial.print(c);         // print the character
+      //Serial.print(c);         // print the character
+      receiveString += c;
       
       toReceive--;
     }
     
-    if (toReceive)
+    if (toReceive > 0) {// still more data to get
       Wire.requestFrom((int)ATtinyAddress, 1);
-    else
-      Serial.println();
+    } else if (toReceive < 0) { 
+      // we're still expecting a value
+      // got a little delay thing happening here.
+      // Serial.print("."); // unfortunately this gives a kind of messy output.
+      delay(100);
+      toReceive --;
+      if ( toReceive > -10 )
+        Wire.requestFrom((int)ATtinyAddress, 1);
+       else
+         Serial.println("Receive Timeout"); 
+    } 
+    //else
+    //  Serial.println();
+
+  }
+  
+  if (receiveString.length() == 8) {
+    Serial.println(debinaryStringify(receiveString));
+    receiveString = "";
+  } else if (receiveString.length() > 0) {
+    Serial.println(receiveString);
+    receiveString = "";
   }
 
   
@@ -66,7 +92,31 @@ void loop(){
    
    // finished getting the string from the terminal.  what are we trying to do?
    if (stringComplete) {
-     if ( inputString.charAt(0) == 'A' ) {
+     
+     CheckCommands();
+     
+     inputString = "";
+     stringComplete = false;
+   }
+
+}
+
+String debinaryStringify(String source) {
+    String result = "";
+    int idxStart = 0;
+    do {
+        char val = 0;
+        for (int i=0; i<8; i++) {
+            val += ((source.charAt(idxStart+i) == '1') << (7-i)); // Trick: Assignment of an evaluation result
+        }
+        result.concat(val);
+        idxStart = source.indexOf(' ') + 1;
+    } while ( (idxStart > 0) && (idxStart < source.length() - 7) );
+    return result;
+}
+
+boolean CheckCommands() {
+  if ( inputString.charAt(0) == 'A' ) {
        ATtinyAddress = inputString.substring(2,inputString.length()-1).toInt();
        Serial.print("Writing to device: ");
        Serial.println(ATtinyAddress);
@@ -78,8 +128,9 @@ void loop(){
      else if ( inputString.charAt(0) == 'F' ) {
        findDevices();
      }
-     else if ( inputString.charAt(0) == 'G' ) {
+     else if ( inputString.charAt(1) == ':' ) { // we're sending something out, doesn't matter what.
        toReceive = -1;
+       SendI2C(ATtinyAddress,inputString);
        Wire.requestFrom((int)ATtinyAddress, 1); // just ask for our count character.
      }
      else
@@ -88,11 +139,6 @@ void loop(){
        Serial.println(inputString);
        SendI2C(ATtinyAddress,inputString);
      }
-     
-     inputString = "";
-     stringComplete = false;
-   }
-
 }
 
 void PrintMenu(){
@@ -130,6 +176,10 @@ void SendI2C(int device,String data) {
 void findDevices()
 {
   byte error, address;
+  
+  // reset our write address to zero before we start
+  // Just know I will regret this...
+  ATtinyAddress = 0;
 
   Serial.println("Scanning for i2c devices...");
 
@@ -146,6 +196,9 @@ void findDevices()
       Serial.print("I2C device found at address: ");
       Serial.print(address);
       Serial.println("  !");
+      
+      if(!ATtinyAddress) // if we're blank, set the first address we find as the send.
+        ATtinyAddress = address;
     }
   }
   Serial.println("Done Scanning.");
