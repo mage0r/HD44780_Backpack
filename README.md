@@ -10,11 +10,11 @@ There are three sections, the circuit design for kicad, some i2c arduino sketche
 This version is compatible with Marc Merlin's NewLiquidCrystal library (https://github.com/marcmerlin)
 
 
-![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/meshthing_addon.png)
+![HD44780_Backpack](https://raw.githubusercontent.com/mage0r/HD44780_Backpack/master/Photos/meshthing_addon.png)
 
-![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/2014-07-06%2002.47.57.jpg)
+![HD44780_Backpack](https://raw.githubusercontent.com/mage0r/HD44780_Backpack/master/Photos/2014-07-06%2002.47.57.jpg)
 
-![HD44780_Backpack](https://raw2.github.com/mage0r/HD44780_Backpack/master/Photos/2014-07-06%2002.48.30.jpg)
+![HD44780_Backpack](https://raw.githubusercontent.com/mage0r/HD44780_Backpack/master/Photos/2014-07-06%2002.48.30.jpg)
 
 CREDITS
 ------------
